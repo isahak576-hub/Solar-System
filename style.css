@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("image/space.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-left:10px;
+  padding-top:25px;
+  padding-right:10px;
+  padding-bottom:20px;
+  gap:50px;
+}
+/*====section====*/
+section{
+  width:100%;
+}
+/*====Section===*/
+h1 {
+  color:white;
+  font-family: Arial, sans-serif;
+  font-size:25px; 
+}
+
+/*====Container====*/
+/*====Container====*/
+
+.container {
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  max-width: 700px;
+  position: relative;
+  flex-shrink: 0;
+}
+.container > div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sun{
+  height:20%;
+  width:20%;
+  border-radius:60%;
+  background-image:url(image/sun.png);
+  position:absolute;
+  top:40%;
+  left:40%;
+}
+.mercury{
+  height:3%;
+  width:3%;
+  border-radius:60%;
+  background-image:url(image/mercury.png);
+  position:absolute;
+  top:40%;
+  left:37%;
+}
+.venus{
+  height:5%;
+  width:5%;
+  border-radius:60%;
+  background-image:url(image/venus.png);
+  position:absolute;
+  top:67%;
+  left:50%;
+}
+.earth{
+  height:6.5%;
+  width:6.5%;
+  border-radius:60%;
+  background-image:url(image/earth.png);
+  position:absolute;
+  top:60%;
+  left:25%;
+}
+.mars{
+  height:4.5%;
+  width:4.5%;
+  border-radius:60%;
+  background-image:url(image/mars.png);
+  position:absolute;
+  top:47%;
+  left:17%;
+}
+.jupiter{
+  height:10%;
+  width:10%;
+  border-radius:60%;
+  background-image:url(image/jupiter.png);
+  position:absolute;
+  top:70%;
+  left:70%;
+}
+.saturn{
+  height:16%;
+  width:20%;
+  background-image:url(image/saturn.png);
+  position:absolute;
+  top:40%;
+  left:83%;
+}
+.uranus{
+  height:7.5%;
+  width:7.5%;
+  background-image:url(image/uranus.png);
+  border-radius:60%;
+  position:absolute;
+  top:10%;
+  left:50%;
+}
+.neptune{
+  height:7%;
+  width:7%;
+  background-image:url(image/neptune.png);
+  border-radius:60%;
+  position:absolute;
+  top:90%;
+  left:50%;
+}
+.container>div>span{
+  opacity:0;
+  animation:none;
+}
+.container>div{
+  opacity:0.7;
+  cursor:pointer;
+}
+.container>div:hover{
+  opacity:1;
+}
+.container > div {
+  cursor: pointer;
+}
+
+.container > div span {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  
+  color: white;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+  pointer-events: none;
+
+  animation: stayStraight 1.111111s linear infinite;
+}
+
+@keyframes stayStraight {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.container > div:hover span {
+  opacity: 1;
+}
+
+.container > div:hover span {
+  opacity: 1;
+}
+/*====container===*/
+/*================================*/
+/*===container2==*/
+.container2 {
+  
+  width: 100%;
+  flex-shrink: 0;
+}
+article{
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+h2{
+  color:white;
+  font-family: Arial, sans-serif;
+  font-size:20px; 
+}
+p{
+  color:white;
+  font-family: Arial, sans-serif;
+  font-size:10px;
+}
+ol{
+  color:white;
+  font-family: Arial, sans-serif;
+  font-size:10px; 
+  list-style-position: inside;
+  letter-spacing:2px;
+  word-spacing:2px;
+}
+/*===container2*===/
+/*================================*/
+/*====Animation===*/
+ .container {
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container>div{
+  animation:rotate2 1s linear infinite;
+}
+
+@keyframes rotate2{
+  to{
+    transform:rotate(-360deg);
+  }
+}
+.container>.saturn{
+  animation: rotate2 10s linear infinite;
+}
+/*====Animation===*/
+/*================================*/
+/*responsive*/
+@media (min-width:500px) and (max-width:1023px){
+  .container2{
+    width:85%;
+    padding-left:15px;
+  }
+  article{
+    width:50%;
+  }
+  p{
+    padding-left:20px;
+  }
+}
+@media (min-width:1024px){
+  .container2{
+    width:85%;
+    padding-left:15px;
+  }
+  article{
+    width:50%;
+  }
+   p{
+    padding-left:20px;
+  }
+}
